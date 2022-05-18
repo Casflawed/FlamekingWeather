@@ -1,8 +1,8 @@
 package com.casflawed.flameking.weather.db;
 
-import org.litepal.crud.LitePalSupport;
+import org.litepal.crud.DataSupport;
 
-public class Province extends LitePalSupport {
+public class Province extends DataSupport {
     private Integer id;
     private Integer provinceCode;
     private String provinceName;

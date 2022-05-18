@@ -1,11 +1,11 @@
 package com.casflawed.flameking.weather.db;
 
-import org.litepal.crud.LitePalSupport;
+import org.litepal.crud.DataSupport;
 
-public class County extends LitePalSupport {
+public class County extends DataSupport {
     private Integer id;
     private String  countyName;
-    private Integer weatherId;
+    private String weatherId;
     private Integer cityId;
 
     public Integer getId() {
@@ -24,11 +24,11 @@ public class County extends LitePalSupport {
         this.countyName = countyName;
     }
 
-    public Integer getWeatherId() {
+    public String getWeatherId() {
         return weatherId;
     }
 
-    public void setWeatherId(Integer weatherId) {
+    public void setWeatherId(String weatherId) {
         this.weatherId = weatherId;
     }
 
