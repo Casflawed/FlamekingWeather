@@ -29,9 +29,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
     // litepal用于对数据库操作，类似JPA
-    implementation 'org.litepal.guolindev:core:3.2.3'
+//    implementation 'org.litepal.guolindev:core:3.2.3'
     // okhttp用于网络请求
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
     // gson用于解析json数据
