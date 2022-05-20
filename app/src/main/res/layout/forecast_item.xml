@@ -13,14 +13,19 @@
         android:layout_weight="2"
         android:textColor="#fff"/>
     <!--  天气概况  -->
-    <TextView
-        android:id="@+id/info_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="#fff"/>
+    <ImageView
+        android:id="@+id/info_icon"
+        android:scaleType="centerInside"
+        android:layout_width="50dp"
+        android:layout_height="30dp"/>
+<!--    <TextView-->
+<!--        android:id="@+id/info_text"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:layout_weight="1"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="#fff"/>-->
     <!--  最高温度  -->
     <TextView
         android:id="@+id/max_text"
