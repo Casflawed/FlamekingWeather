@@ -12,7 +12,7 @@
 
         <fragment
             android:id="@+id/choose_area_fragment"
-            android:name="com.casflawed.flameking.weather.fragment.ChooseAreaFragment"
+            android:name="com.casflawed.flameking.weather.service.ChooseAreaFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </FrameLayout>

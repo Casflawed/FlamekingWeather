@@ -5,6 +5,8 @@ import android.text.TextUtils;
 import com.casflawed.flameking.weather.db.City;
 import com.casflawed.flameking.weather.db.County;
 import com.casflawed.flameking.weather.db.Province;
+import com.casflawed.flameking.weather.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -79,6 +81,26 @@ public class Utility {
         }
         return false;
     }
+
+    /**
+     * 将返回的JSON数据解析成Weather实体类
+     */
+    public static Weather handleWeatherResponse(String response) {
+        try {
+            // 1.获取响应对象数据
+            JSONObject jsonObject = new JSONObject(response);
+            // 2.获取HeWeather数组对象
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            // 3.获取HeWeather数组对象的第一个元素
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            // 4.gson转换json为Java对象
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
 
 
