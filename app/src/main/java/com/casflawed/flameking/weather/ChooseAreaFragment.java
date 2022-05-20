@@ -1,4 +1,4 @@
-package com.casflawed.flameking.weather.service;
+package com.casflawed.flameking.weather;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,8 +15,6 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.casflawed.flameking.weather.MainActivity;
-import com.casflawed.flameking.weather.R;
 import com.casflawed.flameking.weather.db.City;
 import com.casflawed.flameking.weather.db.County;
 import com.casflawed.flameking.weather.db.Province;

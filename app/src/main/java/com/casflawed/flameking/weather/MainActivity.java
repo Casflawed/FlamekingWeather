@@ -7,8 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import com.casflawed.flameking.weather.service.WeatherActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".service.WeatherActivity">
+    tools:context=".WeatherActivity">
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
             <fragment
                 android:id="@+id/choose_area_fragment"
-                android:name="com.casflawed.flameking.weather.service.ChooseAreaFragment"
+                android:name="com.casflawed.flameking.weather.ChooseAreaFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"/>
