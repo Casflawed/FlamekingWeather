@@ -28,7 +28,8 @@
             android:layout_height="25dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_back"/>
     </RelativeLayout>
 
     <!-- 展示省市县数据
