@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.casflawed.flameking.weather.MainActivity;
 import com.casflawed.flameking.weather.R;
 import com.casflawed.flameking.weather.db.City;
 import com.casflawed.flameking.weather.db.County;
@@ -99,10 +100,23 @@ public class ChooseAreaFragment extends Fragment {
                     queryCounties();
                 } else if (currentLevel == LEVEL_COUNTY) {
                     String weatherId = countyList.get(position).getWeatherId();
-                    Intent intent = new Intent(getActivity(), WeatherActivity.class);
-                    intent.putExtra("weather_id", weatherId);
-                    startActivity(intent);
-                    getActivity().finish();
+                    if (getActivity() instanceof MainActivity) {
+                        Intent intent = new Intent(getActivity(), WeatherActivity.class);
+                        intent.putExtra("weather_id", weatherId);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else if (getActivity() instanceof WeatherActivity){
+                        // 如果在WeatherActivity活动中
+                        WeatherActivity activity = (WeatherActivity) getActivity();
+                        // 关闭菜单栏
+                        activity.drawerLayout.closeDrawers();
+                        // 打开下拉刷新进度条
+                        activity.swipeRefresh.setRefreshing(true);
+                        // 请求天气信息
+                        activity.requestWeather(weatherId);
+
+                    }
+
                 }
             }
         });
